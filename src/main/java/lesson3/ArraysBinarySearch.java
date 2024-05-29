@@ -9,5 +9,6 @@ public class ArraysBinarySearch {
         int key = 3;
         System.out.println(key + " имеет индекс = " +
                 Arrays.binarySearch(intArray, key));
+
     }
 }
