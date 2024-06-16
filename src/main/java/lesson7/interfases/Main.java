@@ -28,13 +28,18 @@ public class Main {
         securityMonitoringSystem.startMonitoring();
 
         MonitoringSystem general = new MonitoringSystem() {
+            static int count;
             @Override
             public void startMonitoring() {
                 System.out.println("Мониторинг общий стартовал");
+                invokeCounter();
+                invokeCounter();
+                invokeCounter();
             }
 
-            static int getCurrentErrorCount() {
-                return ERROR_COUNT;
+            static void invokeCounter() {
+                count++;
+                System.out.println("Текущее значение счётчика - " + count);
             }
 
         };
@@ -55,6 +60,7 @@ public class Main {
         general.startMonitoring();
         error.startMonitoring();
         security.startMonitoring();
+        general.startMonitoring();
 
 
     }
