@@ -44,5 +44,21 @@ public class Regex1 {
         while (matcher3.find()) {
             System.out.println(text.substring(matcher3.start(), matcher3.end()));
         }
+
+        Pattern pattern4 = Pattern.compile(".*");
+        System.out.println(pattern4);
+
+        System.out.println(Pattern.matches("А.+а", "Анна"));
+
+        Pattern pattern5 = Pattern.compile(".*", Pattern.CASE_INSENSITIVE);
+        System.out.println(pattern5.flags());
+
+
+        String s = "Егор Алла Анна";
+        Pattern p = Pattern.compile("\\s");
+        String[] strings = p.split(s, 2);//limit - 1
+        for(String str : strings) {
+            System.out.println(str);
+        }
     }
 }
