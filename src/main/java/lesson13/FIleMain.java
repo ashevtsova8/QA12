@@ -41,5 +41,26 @@ public class FIleMain {
         if (isDeleted) {
             System.out.println("Folder has been deleted");
         }
+
+        File file = new File("D://WORK//Stormnet//SomeDir//newFile.txt");
+        System.out.println(file.getName());
+        System.out.println(file.getParent());
+        if (file.exists()) {
+            System.out.println("file exists");
+        } else {
+            System.out.println("file not found");
+        }
+        System.out.println(file.length());
+        if (file.canRead()) {
+            System.out.println("file can be read");
+        } else {
+            System.out.println("file can not be read");
+        }
+
+        if (file.canWrite()) {
+            System.out.println("file can be write");
+        } else {
+            System.out.println("file can not be written");
+        }
     }
 }
